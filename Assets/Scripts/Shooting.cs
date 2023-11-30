@@ -2,11 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Movement : MonoBehaviour
+public class Shooting : MonoBehaviour
 {
-    public float speed = 20.0f;
-
-
+    
+    public GameObject projectilePrefab;
 
     // Start is called before the first frame update
     void Start()
@@ -18,5 +17,10 @@ public class Movement : MonoBehaviour
     void Update()
     {
         
+
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            Instantiate(projectilePrefab, transform.position, transform.rotation);
+        }
     }
 }
