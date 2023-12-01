@@ -2,10 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Shooting : MonoBehaviour
+public class EnemyMovement : MonoBehaviour
 {
-    
-    public GameObject projectilePrefab;
+    public float speed;
+
+
 
     // Start is called before the first frame update
     void Start()
@@ -16,11 +17,6 @@ public class Shooting : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
-
-        if (Input.GetButtonDown("Shoot"))
-        {
-            Instantiate(projectilePrefab, transform.position, transform.rotation);
-        }
+        transform.Translate(Vector3.forward * Time.deltaTime * speed);
     }
 }
