@@ -6,7 +6,7 @@ public class SpawnManagement : MonoBehaviour
 {
     public GameObject obstaclePrefab;
     private float spawnRangeX = 23;
-    private float spawnPosZ = 23;
+    
 
 
 

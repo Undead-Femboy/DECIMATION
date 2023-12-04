@@ -2,11 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Shooting : MonoBehaviour
+public class DetectCollisions : MonoBehaviour
 {
-    
-    public GameObject projectilePrefab;
-
     // Start is called before the first frame update
     void Start()
     {
@@ -17,11 +14,16 @@ public class Shooting : MonoBehaviour
     void Update()
     {
         
+    }
 
-        if (Input.GetButtonDown("Shoot"))
+    private void OnTriggerEnter(Collider other)
+    {
+
+        if (other.gameObject.CompareTag("Enemy"))
         {
-            Instantiate(projectilePrefab, transform.position, transform.rotation);
+            Destroy(gameObject);
+            Destroy(other.gameObject);
         }
-
+     
     }
 }
