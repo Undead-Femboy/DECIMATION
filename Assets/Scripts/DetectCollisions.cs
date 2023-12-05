@@ -19,6 +19,8 @@ public class DetectCollisions : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
 
+        Debug.Log("I've been struck by a smooth " + other.name);
+
         if (other.gameObject.CompareTag("Enemy"))
         {
             Destroy(gameObject);

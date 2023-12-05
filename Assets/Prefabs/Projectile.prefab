@@ -145,6 +145,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   upperBound: 20
+  lowerBound: -10
 --- !u!114 &311302709
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -20,6 +20,7 @@ public class Shooting : MonoBehaviour
 
         if (Input.GetButtonDown("Shoot"))
         {
+            Debug.Log("I pressed shoot");
             Instantiate(projectilePrefab, transform.position, transform.rotation);
         }
 
